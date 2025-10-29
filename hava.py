@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
-CITY = "Istanbul"  # istediğin şehir
+CITY = "Istanbul"  
 
 
 def get_weather(city):
@@ -16,9 +16,9 @@ def get_weather(city):
         data = response.json()
         weather = data["weather"][0]["main"]
         temp = data["main"]["temp"]
-        print(f"🌍 Şehir: {city}")
-        print(f"🌡️  Sıcaklık: {temp}°C")
-        print(f"⛅ Hava: {weather}")
+        print(f"  Şehir: {city}")
+        print(f"  Sıcaklık: {temp}°C")
+        print(f"  Hava: {weather}")
     else:
         print("Hata:", response.json())
 
